@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='UI/styles/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='UI/img/icon.png') }}" type="image/x-icon">
+    <title>DataToolBox</title>
+</head>
+<body>
+    <div class="header container">
+        <div class="header icon wrapper">
+            <button class="header icon button"></button>
+        </div>
+
+        <div class="file description options wrapper">
+            <div class="file description text container">
+                <div class="file description text">
+                    path/to/file<strong>/</strong>test.csv
+                </div>
+                <div class="favorite icon wrapper">
+                    <button class="favorite icon button" title="Add favorite"></button>
+                </div>
+            </div>
+
+            <div class="file options list container">
+                <button class="file option FILE" title="File">File</button>
+                <button class="file option EDIT" title="Edit">Edit</button>
+                <button class="file option VIEW" title="View">View</button>
+                <button class="file option RUN"  title="Run">Run</button>
+                <button class="file option HELP" title="Help">Help</button>
+                <div class="time run information">Last edit was seconds ago</div>
+            </div>
+        </div>
+
+        <div class="actions wrapper">
+            <button class="header action RUN" title="Run all">
+                <div class="RUN icon"></div>
+                <div class="RUN text">Run</div>
+            </button>
+            <button class="header action RESET" title="Reset all cells">
+                <div class="RESET icon"></div>
+                <div class="RESET text">Reset</div>
+            </button>
+        </div>
+    </div>
+
+    <div class="main page container">
+        <div class="left page container">
+            <div class="left page elements">
+                <button class="left page element FILES" title="Access files">
+                    <div class="left element icon FILES"></div>
+                    <div class="left element text FILES">Files</div>
+                </button>
+    
+                <button class="left page element ENV" title="Access environment">
+                    <div class="left element icon ENV"></div>
+                    <div class="left element text ENV">Environment</div>
+                </button>
+    
+                <!-- <button class="left page element SHORTCUTS">
+                    <div class="left element icon SHORTCUTS"></div>
+                    <div class="left element text SHORTCUTS">Shortcuts</div>
+                </button> -->
+            </div>
+            <button class="left page toggle"></button>
+            <div class="beta signature">BETA</div>
+        </div>
+
+
+        <div class="middle page container">
+            <div class="FILES middle page">
+                <div class="files info wrapper">
+                    <div class="files info text">Files</div>
+                    <div class="files info status"></div>
+                    <button class="files info add" title="Add files">+</button>
+                </div>
+
+                <div class="files elements wrapper">
+                    <button class="file element middle page">
+                        <div class="file text middle page">test.csv</div>
+                        <div class="file toggle middle page"></div>
+                    </button>
+
+                    <button class="file element middle page">
+                        <div class="file text middle page">test.csv</div>
+                        <div class="file toggle middle page"></div>
+                    </button>
+
+                    <button class="file element middle page">
+                        <div class="file text middle page">test.csv</div>
+                        <div class="file toggle middle page"></div>
+                    </button>
+                    
+                </div>
+            </div>
+            
+
+            <div class="ENVIRONMENT middle page" style="display: none;">
+                <div class="environment info wrapper">
+                    <div class="environment info text">Environment</div>
+                </div>
+                
+                <div class="py environment version ladder">
+                    <div class="py environment version ladder text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum id, labore quos sint consequuntur, 
+                        doloremque maiores asperiores quisquam reprehenderit nisi ut suscipit nam at quae quam repudiandae 
+                        eveniet aliquam ducimus?
+                    </div>
+                    <button class="py environment version toggle" title="Environment">Pyton 3.8</button>
+                </div>
+
+
+                <div class="py package import list">
+                    <div class="py package import list text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum id, labore quos sint consequuntur, 
+                        doloremque maiores asperiores quisquam reprehenderit nisi ut suscipit nam at quae quam repudiandae 
+                        eveniet aliquam ducimus?
+                    </div>
+                    <div class="package-list">
+                        <div class="package-name numpy">Numpy</div>
+                        <div class="package-name numpy">Numpy</div>
+                        <div class="package-name numpy">Numpy</div>
+                        <div class="package-name numpy">Numpy</div>
+                        <div class="package-name numpy">Numpy</div>
+                        <div class="package-name numpy">Numpy</div>
+                        <div class="package-name numpy">Numpy</div>
+                        <div class="package-name numpy">Numpy</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="right page container">
+            <div class="toolboxes list">
+                <button class="overview toolbox button" title="Overview">Overview</button>
+                <button class="overview toolbox button" title="Overview" disabled>Overview</button>
+                <button class="overview toolbox button" title="Overview" disabled>Overview</button>
+                <button class="overview toolbox button" title="Overview" disabled>Overview</button>
+                <button class="overview toolbox button" title="Overview" disabled>Overview</button>
+            </div>
+
+            <div class="cells container">
+                <div class="cell status">Success</div>
+                <div class="cell element">
+                    <div class="cell information">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Iste corporis exercitationem accusantium optio unde reprehenderit quae dolorem, incidunt nam et. 
+                        Esse dolore cupiditate ab magni ducimus quasi, doloremque voluptates dolores minima hic sed id sint 
+                        ipsum dicta nisi sit eius cumque reprehenderit perferendis minus. Praesentium earum numquam perspiciatis 
+                        eveniet magni nihil dolore inventore. Veniam sapiente maiores similique repudiandae ipsam possimus dicta amet 
+                        suscipit quas eveniet, beatae ipsum minus doloribus eligendi praesentium corporis consequatur doloremque odio! 
+                        Commodi debitis voluptatem neque quas possimus repellat doloremque accusamus 
+                        nihil eveniet totam nisi porro deserunt aliquid deleniti suscipit maiores sit quod ex, ullam corporis repudiandae.
+                    </div>
+                    <div class="cell widgets">
+                        <button class="run cell" title="Run cell"></button>
+                        <button class="delete cell" title="Delete cell"></button>
+                    </div>
+                </div>
+
+                <div class="cell element">
+                    <div class="cell information">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Iste corporis exercitationem accusantium optio unde reprehenderit quae dolorem, incidunt nam et. 
+                        Esse dolore cupiditate ab magni ducimus quasi, doloremque voluptates dolores minima hic sed id sint 
+                        ipsum dicta nisi sit eius cumque reprehenderit perferendis minus. Praesentium earum numquam perspiciatis 
+                        eveniet magni nihil dolore inventore. Veniam sapiente maiores similique repudiandae ipsam possimus dicta amet 
+                        suscipit quas eveniet, beatae ipsum minus doloribus eligendi praesentium corporis consequatur doloremque odio! 
+                        Commodi debitis voluptatem neque quas possimus repellat doloremque accusamus 
+                        nihil eveniet totam nisi porro deserunt aliquid deleniti suscipit maiores sit quod ex, ullam corporis repudiandae.
+                    </div>
+                    <div class="cell widgets">
+                        <button class="run cell" title="Run cell"></button>
+                        <button class="delete cell" title="Delete cell"></button>
+                    </div>
+                </div>
+
+                <div class="cell element">
+                    <div class="cell information">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Iste corporis exercitationem accusantium optio unde reprehenderit quae dolorem, incidunt nam et. 
+                        Esse dolore cupiditate ab magni ducimus quasi, doloremque voluptates dolores minima hic sed id sint 
+                        ipsum dicta nisi sit eius cumque reprehenderit perferendis minus. Praesentium earum numquam perspiciatis 
+                        eveniet magni nihil dolore inventore. Veniam sapiente maiores similique repudiandae ipsam possimus dicta amet 
+                        suscipit quas eveniet, beatae ipsum minus doloribus eligendi praesentium corporis consequatur doloremque odio! 
+                        Commodi debitis voluptatem neque quas possimus repellat doloremque accusamus 
+                        nihil eveniet totam nisi porro deserunt aliquid deleniti suscipit maiores sit quod ex, ullam corporis repudiandae.
+                    </div>
+                    <div class="cell widgets">
+                        <button class="run cell" title="Run cell" ></button>
+                        <button class="delete cell" title="Delete cell"></button>
+                    </div>
+                </div>
+
+                <div class="cell element">
+                    <div class="cell information">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Iste corporis exercitationem accusantium optio unde reprehenderit quae dolorem, incidunt nam et. 
+                        Esse dolore cupiditate ab magni ducimus quasi, doloremque voluptates dolores minima hic sed id sint 
+                        ipsum dicta nisi sit eius cumque reprehenderit perferendis minus. Praesentium earum numquam perspiciatis 
+                        eveniet magni nihil dolore inventore. Veniam sapiente maiores similique repudiandae ipsam possimus dicta amet 
+                        suscipit quas eveniet, beatae ipsum minus doloribus eligendi praesentium corporis consequatur doloremque odio! 
+                        Commodi debitis voluptatem neque quas possimus repellat doloremque accusamus 
+                        nihil eveniet totam nisi porro deserunt aliquid deleniti suscipit maiores sit quod ex, ullam corporis repudiandae.
+                    </div>
+                    <div class="cell widgets">
+                        <button class="run cell" title="Run cell"></button>
+                        <button class="delete cell" title="Delete cell"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="{{ url_for('static', filename='src/eventListeners.js') }}" defer></script>
+<script src="{{ url_for('static', filename='src/app.js') }}" defer></script>
+</html>
